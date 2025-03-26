@@ -1,0 +1,238 @@
+body {
+    line-height: 1.4;
+    font-family: "Inter", sans-serif;
+    min-width: 200px;
+    overflow-y: auto;
+    background-color: #eff4f5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+header, main, footer {
+    max-width: 90%;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.profile-image {
+    object-fit: contain;
+    max-width: 100%;
+    height: auto;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+.about-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-card p, h1{
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.external-pages img {
+    width: 30px;
+    height: 30px;
+    margin-right: 1rem;
+}
+
+.image-block {
+    position: relative;
+}
+
+.external-pages {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin-bottom: 40px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+}
+
+.project-card a,p,h3 {
+    text-align: center;
+    padding: 5px 20px;
+}
+
+.project-icon{
+    width: 20px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 4rem;
+    font-size: 2rem;
+}
+
+.project-card a {
+    transition: transform 0.5s; 
+}
+
+.project-card a:hover {
+    transform: scale(1.2); 
+}
+
+.project-card p {
+    margin-top: -10px;
+}
+
+.project-card, .project-card img {
+    border-radius: 5px;
+}
+
+footer {
+    margin-bottom: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.footer-image {
+    width: 80%;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    border-radius: 2px;
+}
+
+.footer-left h2{
+    margin-top: -5px;
+}
+
+.footer-left p {
+    margin-top: -15px;
+}
+
+footer .external-pages img {
+    width: 15px;
+    height: auto;
+}
+
+footer .external-pages {
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+
+@media(min-width: 650px) {
+    header, main, footer{
+        max-width: 80%;
+    }
+    .header-wrapper {
+        display: block;
+    }
+    .image-block {
+        max-width: 250px;
+        float: left;
+        margin-bottom: 0.5rem;
+        margin-right: 1rem;
+        shape-outside: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        shape-margin: 1rem;
+        z-index: 2;
+    }
+    .external-pages {
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+    }
+    .about-card {
+        display: block;
+        padding: 4rem 2rem;
+        margin: 5rem 1.5rem 0 7.5rem;
+        background-color: white;
+        border-radius: 0.5rem;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+    }
+    .about-card p{
+        text-align: left;
+        margin-top: 1rem;
+    }
+    h1 {
+        text-align: left;
+        margin-left: 10px;
+    }
+    .project-wrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 1.5rem;
+    }
+    footer{
+        background-color: white;
+        border-radius: 3px;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+    }
+
+    .footer-wrapper {
+        display: flex;
+        flex-direction: row;
+    }
+
+    footer img {
+        max-width: 300px;
+        margin: 20px;
+    }
+    
+    .footer-left {
+        padding: 20px;
+
+    }
+}
+
+@media(min-width: 1028px) {
+    .profile-image {
+        width: 400px;
+        height: auto;
+    }
+    .header-wrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0;
+    }
+    .image-block {
+        position: relative;
+        z-index: 1;
+        min-width: 380px;
+        margin-right: 0;
+        margin-bottom: 0;
+        shape-outside: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    .external-pages {
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+    }
+    .about-card {
+        position: relative;
+        display: block;
+        align-self: center;
+        padding: 2.5rem 2.5rem 5rem 2.5rem;
+        margin: 0;
+        background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+    }
+
+}
+
